@@ -1,0 +1,32 @@
+
+.container{
+	height:480px;
+	padding-right: 5px;
+	width:450px;
+	margin:0px;
+	border-right: 1px solid gray;
+	background-repeat: no-repeat;
+	background-size: contain; 
+  	background-position: center center;
+}
+
+.content{
+	position: absolute;
+	top:5%;
+	right:20px;
+	width:300px; 
+}
+
+.content table{
+	text-align: center;
+}
+
+.content .profile_pic {
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+}
+
+.content .profile_pic img{
+	height: 80px;
+}

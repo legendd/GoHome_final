@@ -1,0 +1,190 @@
+html{
+	height:100;
+}
+body {
+  background: url(images/background.png);
+  background-size: 100%;
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+}
+
+.container{
+	width:920px;
+	margin:30px auto;
+	overflow: hidden;
+	position: relative; /* good for 100% margin child element */
+}
+.margin{
+	height:100%;
+	position: absolute;
+	background:#e2e2e2;
+
+	left:50%; 
+	width:2px;
+	margin-left:-1px; /* make it center */
+
+	bottom:10px;	/* margin-bottom space used by li element */
+	z-index: 1000;	
+}
+
+ul.timeline{
+	width: 920px; /* total width and plus 20px for triangles */
+	position: relative;
+	list-style:none;
+	overflow: hidden; 
+	padding: 0px;
+	margin: 0px ;
+}
+
+.timeline > li{
+	width:450px;
+	background:#e2e2e2;
+			
+	position: relative; /* important to hold the absolute element triangles */
+	margin:0px 0px 10px;
+}
+
+.timeline > li img{
+	position:relative;
+}
+
+.timeline > li:before{
+	border:7px solid;
+	content:'';
+	display: block;
+	position: absolute;
+	}
+.timeline > li:nth-child(even){
+	float:right;
+	clear:right;
+}
+.timeline > li:nth-child(odd){
+	float:left;
+	clear:left;
+}
+.timeline > li:nth-child(even):before{
+	/* #e2e2e2 same as li background */
+	border-color:#fff #e2e2e2 #fff #fff;
+	right:100%;
+	top:10px; /* you can adjust */
+}
+		
+.timeline > li:nth-child(odd):before{
+	/* #e2e2e2 same as li background */
+	border-color:#fff #fff #fff #e2e2e2;
+	left:100%;
+	top:10px; /* you can adjust */
+}
+.timeline > li p{
+	margin:10px 0px;
+	line-height:1.8em;
+}
+.timeline > li div{
+	margin: 1%;
+	padding: 1%;
+}
+.timeline > li .date{
+	width: 400px;
+	border-bottom: 1px solid gray;
+}
+.timeline > li img{
+	position: relative;
+}
+a{text-decoration:none;} 
+.timeline > li .btn_addPic{
+    display: block;  
+    width: 80px;  
+    height: 80px;
+    overflow: hidden;    
+    background: url(image/1.png) no-repeat ;
+    background-size: contain; 
+    cursor: pointer;  
+    text-align: center;  
+	padding: 2%;
+	margin-top:30px;
+	margin-left:10px;
+	float: left;
+}
+
+.timeline > li .pic{
+	padding: 3%;
+	width: 90%;
+}
+
+#po_btn{
+	margin-top: 20px;
+	height: 30px;
+	width: 50px;
+	position: relative;
+	right: -40%;
+	background-color: white;
+}
+#small_photo{
+display: block;   
+width: 80px;  
+height: 80px;  
+font-size: 100px; /* 增大不同浏览器的可点击区域 */  
+opacity: 0; /* 实现的关键点 */  
+filter:alpha(opacity=0);/* 兼容IE */  
+z-index: 10;
+}  
+
+#small_photo1{
+display: block;   
+width: 80px;  
+height: 80px;  
+font-size: 100px; /* 增大不同浏览器的可点击区域 */  
+opacity: 0; /* 实现的关键点 */  
+filter:alpha(opacity=0);/* 兼容IE */  
+z-index: 10;
+}  
+
+
+#po_text{
+	font-size:15px;
+	margin-top: 30px;
+	margin-left:10px;
+	height: 100px;
+	width: 300px;
+	resize: none;
+	background-color: #e2e2e2; 
+}
+
+#switch {
+    position: absolute;  /*絕對位置*/
+    left: 90%;
+    width:100px;
+}
+#hottest {
+	width: 20px;
+	height: 60px;
+	font-size: 14px;
+	line-height: 14px;
+	background-color: white; 
+	margin-bottom: 20px;
+	padding: 10px 33px 10px 33px;
+	text-align: center;
+}
+
+#latest {
+	background-color: #f38a8d;
+	width: 20px;
+	height: 60px;
+	font-size: 14px;
+	line-height: 14px;
+	margin-bottom: 20px;
+	padding: 10px 33px 10px 33px;
+	text-align: center;
+}
+
+#footer{
+	position:relative;
+}
+
+
+.hottestpage{
+	display: none;
+}
+
+#switch div{
+	cursor: pointer;
+} 
